@@ -6,7 +6,9 @@ interface WalletModalContextState {
   setVisible: (open: boolean) => void;
 }
 
-export const WalletModalContext = createContext<WalletModalContextState | null>(null);
+export const WalletModalContext = createContext<WalletModalContextState | null>(
+  null
+);
 
 export function WalletModalProvider({
   children,
