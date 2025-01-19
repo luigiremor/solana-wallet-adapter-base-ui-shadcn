@@ -1,4 +1,4 @@
-import { WalletModal } from "@/components/wallet-modal";
+import { WalletModal } from "@/components/features/wallet/wallet-modal";
 import { createContext, useState } from "react";
 
 interface WalletModalContextState {

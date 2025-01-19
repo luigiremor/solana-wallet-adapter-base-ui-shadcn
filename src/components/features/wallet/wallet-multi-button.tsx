@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ArrowRightLeft, Copy, LogOut } from "lucide-react";
-import { WalletIcon } from "@/components/wallet-icon";
+import { WalletIcon } from "@/components/features/wallet/wallet-icon";
 import { useWalletModal } from "@/hooks/use-wallet-modal";
 
 interface WalletMultiButtonProps {

@@ -8,7 +8,7 @@ import {
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 
 import { clusterApiUrl } from "@solana/web3.js";
-import { WalletMultiButton } from "@/components/wallet-multi-button";
+import { WalletMultiButton } from "@/components/features/wallet/wallet-multi-button";
 import { WalletModalProvider } from "@/provider/wallet-modal";
 
 export const Wallet: FC = () => {

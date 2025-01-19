@@ -11,9 +11,9 @@ import {
 } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useWalletModal } from "@/hooks/use-wallet-modal";
-import { WalletListItem } from "@/components/wallet-list-item";
-import { MoreWalletsButton } from "@/components/more-wallets-button";
-import { NoWalletsFound } from "@/components/no-wallets-found";
+import { WalletListItem } from "@/components/features/wallet/wallet-list-item";
+import { MoreWalletsButton } from "@/components/features/wallet/more-wallets-button";
+import { NoWalletsFound } from "@/components/features/wallet/no-wallets-found";
 import { Wallet } from "lucide-react";
 
 export function WalletModal() {
