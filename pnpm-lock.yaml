@@ -28,7 +28,7 @@ dependencies:
     version: 0.9.35(@solana/web3.js@1.98.0)(bs58@5.0.0)(react-dom@19.0.0)(react-native@0.76.6)(react@19.0.0)
   '@solana/wallet-adapter-wallets':
     specifier: ^0.19.32
-    version: 0.19.32(@babel/core@7.26.0)(@babel/runtime@7.26.0)(@solana/web3.js@1.98.0)(bs58@5.0.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@19.0.0)(react-native@0.76.6)(react@19.0.0)(tslib@2.8.1)(typescript@5.7.3)(ws@8.18.0)
+    version: 0.19.32(@babel/core@7.26.0)(@babel/runtime@7.26.0)(@solana/web3.js@1.98.0)(bs58@5.0.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@19.0.0)(react-native@0.76.6)(react@19.0.0)(tslib@2.8.1)(typescript@5.7.3)(ws@7.5.10)
   '@solana/web3.js':
     specifier: ^1.98.0
     version: 1.98.0
@@ -38,6 +38,9 @@ dependencies:
   clsx:
     specifier: ^2.1.1
     version: 2.1.1
+  framer-motion:
+    specifier: ^11.18.1
+    version: 11.18.1(react-dom@19.0.0)(react@19.0.0)
   lucide-react:
     specifier: ^0.473.0
     version: 0.473.0(react@19.0.0)
@@ -3663,6 +3666,21 @@ packages:
       - fastestsmallesttextencoderdecoder
     dev: false
 
+  /@solana/rpc-subscriptions-channel-websocket@2.0.0(typescript@5.7.3)(ws@7.5.10):
+    resolution: {integrity: sha512-hSQDZBmcp2t+gLZsSBqs/SqVw4RuNSC7njiP46azyzW7oGg8X2YPV36AHGsHD12KPsc0UpT1OAZ4+AN9meVKww==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5'
+      ws: ^8.18.0
+    dependencies:
+      '@solana/errors': 2.0.0(typescript@5.7.3)
+      '@solana/functional': 2.0.0(typescript@5.7.3)
+      '@solana/rpc-subscriptions-spec': 2.0.0(typescript@5.7.3)
+      '@solana/subscribable': 2.0.0(typescript@5.7.3)
+      typescript: 5.7.3
+      ws: 7.5.10
+    dev: false
+
   /@solana/rpc-subscriptions-channel-websocket@2.0.0(typescript@5.7.3)(ws@8.18.0):
     resolution: {integrity: sha512-hSQDZBmcp2t+gLZsSBqs/SqVw4RuNSC7njiP46azyzW7oGg8X2YPV36AHGsHD12KPsc0UpT1OAZ4+AN9meVKww==}
     engines: {node: '>=20.18.0'}
@@ -3689,6 +3707,29 @@ packages:
       '@solana/rpc-spec-types': 2.0.0(typescript@5.7.3)
       '@solana/subscribable': 2.0.0(typescript@5.7.3)
       typescript: 5.7.3
+    dev: false
+
+  /@solana/rpc-subscriptions@2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)(ws@7.5.10):
+    resolution: {integrity: sha512-AdwMJHMrhlj7q1MPjZmVcKq3iLqMW3N0MT8kzIAP2vP+8o/d6Fn4aqGxoz2Hlfn3OYIZoYStN2VBtwzbcfEgMA==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5'
+    dependencies:
+      '@solana/errors': 2.0.0(typescript@5.7.3)
+      '@solana/fast-stable-stringify': 2.0.0(typescript@5.7.3)
+      '@solana/functional': 2.0.0(typescript@5.7.3)
+      '@solana/promises': 2.0.0(typescript@5.7.3)
+      '@solana/rpc-spec-types': 2.0.0(typescript@5.7.3)
+      '@solana/rpc-subscriptions-api': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/rpc-subscriptions-channel-websocket': 2.0.0(typescript@5.7.3)(ws@7.5.10)
+      '@solana/rpc-subscriptions-spec': 2.0.0(typescript@5.7.3)
+      '@solana/rpc-transformers': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/rpc-types': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/subscribable': 2.0.0(typescript@5.7.3)
+      typescript: 5.7.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+      - ws
     dev: false
 
   /@solana/rpc-subscriptions@2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)(ws@8.18.0):
@@ -3819,6 +3860,28 @@ packages:
       typescript: 5.7.3
     transitivePeerDependencies:
       - fastestsmallesttextencoderdecoder
+    dev: false
+
+  /@solana/transaction-confirmation@2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)(ws@7.5.10):
+    resolution: {integrity: sha512-JkTw5gXLiqQjf6xK0fpVcoJ/aMp2kagtFSD/BAOazdJ3UYzOzbzqvECt6uWa3ConcMswQ2vXalVtI7ZjmYuIeg==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5'
+    dependencies:
+      '@solana/addresses': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/codecs-strings': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/errors': 2.0.0(typescript@5.7.3)
+      '@solana/keys': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/promises': 2.0.0(typescript@5.7.3)
+      '@solana/rpc': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/rpc-subscriptions': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)(ws@7.5.10)
+      '@solana/rpc-types': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/transaction-messages': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/transactions': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      typescript: 5.7.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+      - ws
     dev: false
 
   /@solana/transaction-confirmation@2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)(ws@8.18.0):
@@ -4292,7 +4355,7 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@solana/wallet-adapter-trezor@0.1.2(@babel/core@7.26.0)(@solana/web3.js@1.98.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.76.6)(tslib@2.8.1)(typescript@5.7.3)(ws@8.18.0):
+  /@solana/wallet-adapter-trezor@0.1.2(@babel/core@7.26.0)(@solana/web3.js@1.98.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.76.6)(tslib@2.8.1)(typescript@5.7.3)(ws@7.5.10):
     resolution: {integrity: sha512-x4nXntYi1SIv63ZdXWX/Rq/VKwguByKu67WpyUXsu8kOdviksb20bQMuAR7Ue41oJ9zSnLlTxAxA1SuWNkFRBg==}
     engines: {node: '>=16'}
     peerDependencies:
@@ -4300,7 +4363,7 @@ packages:
     dependencies:
       '@solana/wallet-adapter-base': 0.9.23(@solana/web3.js@1.98.0)
       '@solana/web3.js': 1.98.0
-      '@trezor/connect-web': 9.4.7(@babel/core@7.26.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.76.6)(tslib@2.8.1)(typescript@5.7.3)(ws@8.18.0)
+      '@trezor/connect-web': 9.4.7(@babel/core@7.26.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.76.6)(tslib@2.8.1)(typescript@5.7.3)(ws@7.5.10)
       buffer: 6.0.3
     transitivePeerDependencies:
       - '@babel/core'
@@ -4372,7 +4435,7 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@solana/wallet-adapter-wallets@0.19.32(@babel/core@7.26.0)(@babel/runtime@7.26.0)(@solana/web3.js@1.98.0)(bs58@5.0.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@19.0.0)(react-native@0.76.6)(react@19.0.0)(tslib@2.8.1)(typescript@5.7.3)(ws@8.18.0):
+  /@solana/wallet-adapter-wallets@0.19.32(@babel/core@7.26.0)(@babel/runtime@7.26.0)(@solana/web3.js@1.98.0)(bs58@5.0.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-dom@19.0.0)(react-native@0.76.6)(react@19.0.0)(tslib@2.8.1)(typescript@5.7.3)(ws@7.5.10):
     resolution: {integrity: sha512-voZYQiIy1yXuKvm7x7YpnQ53eiJC7NpIYSQjzApOUiswiBRVeYcnPO4O/MMPUwsGkS7iZKqKZjo5CnOaN44n+g==}
     engines: {node: '>=16'}
     peerDependencies:
@@ -4409,7 +4472,7 @@ packages:
       '@solana/wallet-adapter-tokenary': 0.1.12(@solana/web3.js@1.98.0)
       '@solana/wallet-adapter-tokenpocket': 0.4.19(@solana/web3.js@1.98.0)
       '@solana/wallet-adapter-torus': 0.11.28(@babel/runtime@7.26.0)(@solana/web3.js@1.98.0)
-      '@solana/wallet-adapter-trezor': 0.1.2(@babel/core@7.26.0)(@solana/web3.js@1.98.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.76.6)(tslib@2.8.1)(typescript@5.7.3)(ws@8.18.0)
+      '@solana/wallet-adapter-trezor': 0.1.2(@babel/core@7.26.0)(@solana/web3.js@1.98.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.76.6)(tslib@2.8.1)(typescript@5.7.3)(ws@7.5.10)
       '@solana/wallet-adapter-trust': 0.1.13(@solana/web3.js@1.98.0)
       '@solana/wallet-adapter-unsafe-burner': 0.1.7(@solana/web3.js@1.98.0)
       '@solana/wallet-adapter-walletconnect': 0.1.16(@solana/web3.js@1.98.0)
@@ -4580,6 +4643,36 @@ packages:
       - bufferutil
       - encoding
       - utf-8-validate
+    dev: false
+
+  /@solana/web3.js@2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)(ws@7.5.10):
+    resolution: {integrity: sha512-x+ZRB2/r5tVK/xw8QRbAfgPcX51G9f2ifEyAQ/J5npOO+6+MPeeCjtr5UxHNDAYs9Ypo0PN+YJATCO4vhzQJGg==}
+    engines: {node: '>=20.18.0'}
+    peerDependencies:
+      typescript: '>=5'
+    dependencies:
+      '@solana/accounts': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/addresses': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/codecs': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/errors': 2.0.0(typescript@5.7.3)
+      '@solana/functional': 2.0.0(typescript@5.7.3)
+      '@solana/instructions': 2.0.0(typescript@5.7.3)
+      '@solana/keys': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/programs': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/rpc': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/rpc-parsed-types': 2.0.0(typescript@5.7.3)
+      '@solana/rpc-spec-types': 2.0.0(typescript@5.7.3)
+      '@solana/rpc-subscriptions': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)(ws@7.5.10)
+      '@solana/rpc-types': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/signers': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/sysvars': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/transaction-confirmation': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)(ws@7.5.10)
+      '@solana/transaction-messages': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      '@solana/transactions': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)
+      typescript: 5.7.3
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+      - ws
     dev: false
 
   /@solana/web3.js@2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)(ws@8.18.0):
@@ -4938,6 +5031,21 @@ packages:
       - react-native
     dev: false
 
+  /@trezor/blockchain-link-types@1.2.5(fastestsmallesttextencoderdecoder@1.0.22)(tslib@2.8.1)(typescript@5.7.3)(ws@7.5.10):
+    resolution: {integrity: sha512-aGxLNGxhQqre4cCYDboy1s1gHAi92tTszLYl3GMhGmtB6EuAl049eO8ngCcMcuOZLTvFYA/1e/3mZoPIMBkeng==}
+    peerDependencies:
+      tslib: ^2.6.2
+    dependencies:
+      '@solana/web3.js': 2.0.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.7.3)(ws@7.5.10)
+      '@trezor/type-utils': 1.1.4
+      '@trezor/utxo-lib': 2.2.6(tslib@2.8.1)
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+      - typescript
+      - ws
+    dev: false
+
   /@trezor/blockchain-link-types@1.2.5(fastestsmallesttextencoderdecoder@1.0.22)(tslib@2.8.1)(typescript@5.7.3)(ws@8.18.0):
     resolution: {integrity: sha512-aGxLNGxhQqre4cCYDboy1s1gHAi92tTszLYl3GMhGmtB6EuAl049eO8ngCcMcuOZLTvFYA/1e/3mZoPIMBkeng==}
     peerDependencies:
@@ -5024,12 +5132,12 @@ packages:
       - react-native
     dev: false
 
-  /@trezor/connect-web@9.4.7(@babel/core@7.26.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.76.6)(tslib@2.8.1)(typescript@5.7.3)(ws@8.18.0):
+  /@trezor/connect-web@9.4.7(@babel/core@7.26.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.76.6)(tslib@2.8.1)(typescript@5.7.3)(ws@7.5.10):
     resolution: {integrity: sha512-mICiGnw1xt60LbELZd2OId+nXGG/NAiywQIXGp5rOY6116I/sqJMw4fuKQrkGJ5zpKzzX/G7Be9GcshICD1ZDg==}
     peerDependencies:
       tslib: ^2.6.2
     dependencies:
-      '@trezor/connect': 9.4.7(@babel/core@7.26.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.76.6)(tslib@2.8.1)(typescript@5.7.3)(ws@8.18.0)
+      '@trezor/connect': 9.4.7(@babel/core@7.26.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.76.6)(tslib@2.8.1)(typescript@5.7.3)(ws@7.5.10)
       '@trezor/connect-common': 0.2.7(react-native@0.76.6)(tslib@2.8.1)
       '@trezor/utils': 9.2.6(tslib@2.8.1)
       tslib: 2.8.1
@@ -5047,7 +5155,7 @@ packages:
       - ws
     dev: false
 
-  /@trezor/connect@9.4.7(@babel/core@7.26.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.76.6)(tslib@2.8.1)(typescript@5.7.3)(ws@8.18.0):
+  /@trezor/connect@9.4.7(@babel/core@7.26.0)(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.76.6)(tslib@2.8.1)(typescript@5.7.3)(ws@7.5.10):
     resolution: {integrity: sha512-Ky8AMWxhq0ieOCNgZtaIKTQie5qaQjK3uuv+TriUZXuxDqSoJcD8T50TAEY1Lxo1xl8Yv3wT0m6LQkmBn3T+xQ==}
     peerDependencies:
       tslib: ^2.6.2
@@ -5057,7 +5165,7 @@ packages:
       '@ethereumjs/tx': 5.4.0
       '@fivebinaries/coin-selection': 2.2.1
       '@trezor/blockchain-link': 2.3.6(fastestsmallesttextencoderdecoder@1.0.22)(react-native@0.76.6)(tslib@2.8.1)(typescript@5.7.3)
-      '@trezor/blockchain-link-types': 1.2.5(fastestsmallesttextencoderdecoder@1.0.22)(tslib@2.8.1)(typescript@5.7.3)(ws@8.18.0)
+      '@trezor/blockchain-link-types': 1.2.5(fastestsmallesttextencoderdecoder@1.0.22)(tslib@2.8.1)(typescript@5.7.3)(ws@7.5.10)
       '@trezor/connect-analytics': 1.2.4(react-native@0.76.6)(tslib@2.8.1)
       '@trezor/connect-common': 0.2.7(react-native@0.76.6)(tslib@2.8.1)
       '@trezor/protobuf': 1.2.6(tslib@2.8.1)
@@ -7948,6 +8056,27 @@ packages:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
 
+  /framer-motion@11.18.1(react-dom@19.0.0)(react@19.0.0):
+    resolution: {integrity: sha512-EQa8c9lWVOm4zlz14MsBJWr8woq87HsNmsBnQNvcS0hs8uzw6HtGAxZyIU7EGTVpHD1C1n01ufxRyarXcNzpPg==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      motion-dom: 11.18.1
+      motion-utils: 11.18.1
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+      tslib: 2.8.1
+    dev: false
+
   /fresh@0.5.2:
     resolution: {integrity: sha512-zJ2mQYM18rEFOudeV4GShTGIQ7RbzA7ozbU9I/XBpm7kqgMywgmylMwXHxZJmkVoYkna9d2pVXVXPdYTP9ej8Q==}
     engines: {node: '>= 0.6'}
@@ -9435,6 +9564,16 @@ packages:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
     engines: {node: '>=10'}
     hasBin: true
+    dev: false
+
+  /motion-dom@11.18.1:
+    resolution: {integrity: sha512-g76KvA001z+atjfxczdRtw/RXOM3OMSdd1f4DL77qCTF/+avrRJiawSG4yDibEQ215sr9kpinSlX2pCTJ9zbhw==}
+    dependencies:
+      motion-utils: 11.18.1
+    dev: false
+
+  /motion-utils@11.18.1:
+    resolution: {integrity: sha512-49Kt+HKjtbJKLtgO/LKj9Ld+6vw9BjH5d9sc40R/kVyH8GLAXgT42M2NnuPcJNuA3s9ZfZBUcwIgpmZWGEE+hA==}
     dev: false
 
   /ms@2.0.0:
