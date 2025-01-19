@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Copy, LogOut } from "lucide-react";
+import { ArrowRightLeft, Copy, LogOut } from "lucide-react";
 import { WalletIcon } from "@/components/wallet-icon";
 import { useWalletModal } from "@/hooks/use-wallet-modal";
 
@@ -121,12 +121,7 @@ export function WalletMultiButton({
             </DropdownMenuItem>
           )}
           <DropdownMenuItem onClick={openModal}>
-            <WalletIcon
-              wallet={{
-                icon: wallet.adapter.icon,
-                name: wallet.adapter.name,
-              }}
-            />
+            <ArrowRightLeft className="mr-2 h-4 w-4" />
             <span>{labels["change-wallet"]}</span>
           </DropdownMenuItem>
           <DropdownMenuItem onClick={disconnectWallet}>

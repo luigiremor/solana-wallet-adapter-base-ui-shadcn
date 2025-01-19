@@ -9,6 +9,7 @@ import { useWalletModal } from '@/hooks/use-wallet-modal'
 import { WalletListItem } from '@/components/wallet-list-item'
 import { MoreWalletsButton } from '@/components/more-wallets-button'
 import { NoWalletsFound } from '@/components/no-wallets-found'
+import { Wallet } from 'lucide-react'
 
 export function WalletModal() {
   const { wallets, select } = useWallet()
@@ -32,16 +33,21 @@ export function WalletModal() {
     <Dialog open={visible} onOpenChange={setVisible}>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Connect a wallet on Solana to continue</DialogTitle>
+          <div className="bg-primary/80 text-primary-foreground p-4 rounded-full w-fit mx-auto">
+            <Wallet className="size-10" />
+          </div>
+          <DialogTitle className="text-2xl font-bold text-center">Connect a wallet on Solana to continue</DialogTitle>
         </DialogHeader>
-        <ScrollArea className="mt-6 max-h-[300px]">
-          {listedWallets.map((wallet) => (
-            <WalletListItem
-              key={wallet.adapter.name}
+        <ScrollArea className="max-h-[300px]">
+          <div className="flex flex-col gap-2 p-1">
+            {listedWallets.map((wallet) => (
+              <WalletListItem
+                key={wallet.adapter.name}
               wallet={wallet}
               handleClick={() => handleWalletClick(wallet.adapter.name)}
-            />
-          ))}
+              />
+            ))}
+          </div>
           {collapsedWallets.length > 0 && (
             <>
               <MoreWalletsButton expanded={expanded} onClick={handleExpandClick} />
